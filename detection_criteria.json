@@ -1,62 +1,60 @@
 {
   "ad_skip_buttons": [
-    {
-      "id": "com.google.android.apps.youtube.music:id/dismiss(_button)?"
-    },
-    {
-      "id": ".*:id/banderol_close"
-    },
-    {
-      "id": ".*:id/skip_ad(_button)?(_text|_container)?"
-    },
-    {
-      "text": "Close ad panel"
-    },
-    {
-      "text": "(Pass|Ignor)er l(es |')annonces?"
-    },
-    {
-      "text": "Skip ads?"
-    },
-    {
-      "text": "略過廣告"
-    },
-    {
-      "text": "Werbung(en)? überspringen"
-    }
+    { "id": "com.google.android.apps.youtube.music:id/dismiss(_button)?" },
+    { "id": "com.google.android.apps.youtube.music:id/secondary_action" },
+    { "id": ".*:id/banderol_close" },
+    { "id": ".*:id/(modern_)?skip_ad(_button)?(_text|_container)?" },
+    { "id": ".*:id/player_overlay_modern_skip_ad_button" },
+    { "id": ".*:id/ad_dismiss(_button)?" },
+    { "id": ".*:id/(btn|iv|ib|img)_close(_ad)?" },
+    { "id": ".*:id/(al_close_button|applovin_interstitial_close_button|unity_ads_close_button|unity_ads_skip|tt_video_ad_close|mbridge_native_ec_close|(is|isa)_close_button|vungle_close_button)" },
+    { "text": "Skip ads?" },
+    { "text": "Salta annunci?" },
+    { "text": "(Saltar|Omitir) anuncios?" },
+    { "text": "Pular anúncios?" },
+    { "text": "(Pass|Ignor)er l(es |'| )annonces?" },
+    { "text": "Werbung(en)? überspringen" },
+    { "text": "Close ad( panel)?" },
+    { "text": "Chiudi annuncio" },
+    { "text": "Cerrar anuncio" },
+    { "text": "Fechar anúncio" },
+    { "text": "Werbung schließen" },
+    { "text": "Fermer l'annonce" },
+    { "text": "略過廣告" },
+    { "text": "關閉廣告" },
+    { "text": "跳过广告" },
+    { "text": "关闭广告" },
+    { "text": "広告をスキップ" },
+    { "text": "広告を閉じる" },
+    { "text": "광고 건너뛰기" },
+    { "text": "광고 닫기" },
+    { "text": "Пропустить( рекламу)?" },
+    { "text": "Закрыть рекламу" },
+    { "text": ".*(Button to collapse the message|collapse the message).*" },
+    { "text": "(NO THANKS|No thanks|Non merci|No gracias|No, grazie|Not now|Non ora|Jetzt nicht|Agora não)" }
   ],
   "ad_playing_indicators": [
-    {
-      "id": "gmsg-video-player"
-    },
-    {
-      "id": "performance_video_container"
-    },
-    {
-      "id": "count-down"
-    },
-    {
-      "id": "com.google.android.apps.youtube.music:id/player_learn_more_button"
-    },
-    {
-      "text": "Visit advertiser"
-    },
-    {
-      "id": "com.google.android.youtube:id/countdown_text"
-    },
-    {
-      "id": ".*:id/ad_progress_text"
-    },
-    {
-      "id": ".*:id/app_promo_ad_cta_overlay"
-    }
+    { "id": "gmsg-video-player" },
+    { "id": "performance_video_container" },
+    { "id": "count-down" },
+    { "id": "com.google.android.apps.youtube.music:id/player_learn_more_button" },
+    { "id": "com.google.android.youtube:id/countdown_text" },
+    { "id": ".*:id/ad_(progress_text|countdown)" },
+    { "id": ".*:id/app_promo_ad_cta_overlay" },
+    { "id": ".*:id/(tt_reward_full_count_down|al_html_view|unity_ads_count_down)" },
+    { "text": "Visit advertiser" },
+    { "text": "Visita (il sito dell')?inserzionista" },
+    { "text": "Visitar anunciante" },
+    { "text": "Visiter le site de l'annonceur" },
+    { "text": "Webseite des Werbetreibenden besuchen" },
+    { "text": "Video will play after ad" },
+    { "text": "Il video inizierà dopo l'annuncio" },
+    { "text": "El video se reproducirá después del anuncio" }
   ],
   "extra_clickables": [
-    {
-      "id": "com.google.android.youtube:id/hide_controls_button_top"
-    },
-    {
-      "id": "close_(video_)?button"
-    }
+    { "id": "com.google.android.youtube:id/hide_controls_button_top" },
+    { "id": "close(_video)?_button" },
+    { "id": ".*:id/go_premium_button_continue_with_ads" },
+    { "id": ".*:id/(close|rateDialog.*Cancel)" }
   ]
 }
