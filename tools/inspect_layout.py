@@ -29,11 +29,23 @@ def get_attribs(elem):
     }
 
 
+def get_adb_cmd():
+    import shutil
+    adb_path = shutil.which("adb")
+    if adb_path:
+        return adb_path
+    fallback = Path(r"C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.exe")
+    if fallback.exists():
+        return str(fallback)
+    return "adb"
+
+
 def dump_via_adb():
-    print("Tentativo di estrazione del layout tramite ADB...")
+    adb_cmd = get_adb_cmd()
+    print(f"Tentativo di estrazione del layout tramite ADB ({adb_cmd})...")
     try:
         # Verifica dispositivi connessi
-        res = subprocess.run(["adb", "devices"], capture_output=True, text=True, check=True)
+        res = subprocess.run([adb_cmd, "devices"], capture_output=True, text=True, check=True)
         lines = [l for l in res.stdout.strip().splitlines() if "\tdevice" in l]
         if not lines:
             print("Nessun dispositivo Android connesso con debug USB autorizzato.")
@@ -41,8 +53,8 @@ def dump_via_adb():
 
         print(f"Dispositivo rilevato: {lines[0].split()[0]}")
         # Esegue il dump
-        subprocess.run(["adb", "shell", "uiautomator", "dump", "/sdcard/window_dump.xml"], check=True)
-        dump_proc = subprocess.run(["adb", "shell", "cat", "/sdcard/window_dump.xml"], capture_output=True, text=True, check=True)
+        subprocess.run([adb_cmd, "shell", "uiautomator", "dump", "/sdcard/window_dump.xml"], check=True)
+        dump_proc = subprocess.run([adb_cmd, "shell", "cat", "/sdcard/window_dump.xml"], capture_output=True, text=True, check=True)
         xml_content = dump_proc.stdout
         return ET.fromstring(xml_content)
     except FileNotFoundError:
