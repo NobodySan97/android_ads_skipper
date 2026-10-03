@@ -48,8 +48,8 @@ def evaluate_rules_on_tree(root, criteria):
         enabled = attrs.get("enabled", "false") == "true"
         clickable = attrs.get("clickable", "false") == "true"
         text = attrs.get("text", "")
-        desc = attrs.get("contentDescription", "")
-        elem_id = attrs.get("id", "")
+        desc = attrs.get("contentDescription", "") or attrs.get("content-desc", "")
+        elem_id = attrs.get("id", "") or attrs.get("resource-id", "")
 
         # Skip button test: must be clickable + enabled
         if enabled and clickable:

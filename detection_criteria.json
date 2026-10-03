@@ -30,10 +30,14 @@
     { "text": "광고 닫기" },
     { "text": "Пропустить( рекламу)?" },
     { "text": "Закрыть рекламу" },
+    { "text": "Chiudi( il foglio| la scheda)?" },
+    { "text": "Close( sheet)?" },
+    { "text": "(Chiudi|Close|Fermer|Schließen|Cerrar|Fechar)" },
     { "text": ".*(Button to collapse the message|collapse the message).*" },
     { "text": "(NO THANKS|No thanks|Non merci|No gracias|No, grazie|Not now|Non ora|Jetzt nicht|Agora não)" }
   ],
   "ad_playing_indicators": [
+    { "text": "^(ANNUNCIO|Annuncio|PUBBLICITÀ|Pubblicità)$" },
     { "id": "gmsg-video-player" },
     { "id": "performance_video_container" },
     { "id": "count-down" },
