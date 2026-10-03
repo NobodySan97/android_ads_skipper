@@ -55,9 +55,17 @@ android_ads_skipper/
 
 ## 📲 Configurazione in LlamaLab Automate
 
-1. **Scarica il flusso di Automate**:
-   - Flusso della community: [📺🌐 Universal ads mute & skip improved](https://llamalab.com/automate/community/flows/39642).
-2. **Importa la Watchlist**:
+Puoi scegliere uno dei due metodi:
+
+### Metodo A (Consigliato - Diretto con file .flo già pronto)
+1. Scarica direttamente sul telefono il file già pre-configurato:
+   **[Universal_ads_mute_and_skip_improved_v3.flo](https://raw.githubusercontent.com/NobodySan97/android_ads_skipper/main/Universal_ads_mute_and_skip_improved_v3.flo)**
+2. Aprilo con l'app **Automate**: il flusso è già impostato con l'URL del tuo repository e pronto all'avvio!
+
+### Metodo B (Se hai già installato il flusso dalla community)
+1. Apri il flusso esistente [#39642](https://llamalab.com/automate/community/flows/39642).
+2. Tocca il blocco **HTTP Request** (o *Download*) e imposta come Request URL:
+   `https://raw.githubusercontent.com/NobodySan97/android_ads_skipper/main/android_ads_skip_watchlist.json`
    - Il flusso legge le variabili contenute in `android_ads_skip_watchlist.json`.
    - Puoi caricare il file direttamente sulla memoria interna del dispositivo oppure puntare all'URL raw del file JSON/HJSON.
 3. **Permessi Android necessari**:
